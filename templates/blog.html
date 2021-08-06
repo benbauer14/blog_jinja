@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog
+    </title>
+</head>
+<body>
+    {% for blog_post in blog: %}
+        <h1>{{blog_post["title"]}}</h1>
+        <h3>{{blog_post["subtitle"]}}</h3>
+        <p>{{blog_post["body"]}}</p>
+    {% endfor %}
+</body>
+<footer>
+<p>Copywrite: {{ year }} BGB </p>
+</footer>
+</html>
