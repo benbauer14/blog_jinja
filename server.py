@@ -23,7 +23,8 @@ def guess(name):
 def blog():
     blogdata = requests.get("https://api.npoint.io/1b1d407ac0eb8b4432a4")
     blog = blogdata.json()
-    return render_template("blog.html", blog=blog)
+    year = datetime.date.today().year
+    return render_template("blog.html", blog=blog, year=year)
 
 if __name__ == "__main__":
     app.run(debug=True)
